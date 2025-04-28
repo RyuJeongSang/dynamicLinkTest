@@ -25,13 +25,20 @@ export default function Home() {
 
   // 디바이스 OS 감지
   function getDeviceOS() {
-    const userAgent = navigator.userAgent || navigator.vendor || (window as any).opera;
+    // window에 추가 속성을 위한 인터페이스 확장
+    interface ExtendedWindow extends Window {
+      opera?: unknown;
+      MSStream?: unknown;
+    }
     
-    if (/android/i.test(userAgent)) {
+    const extWindow = window as ExtendedWindow;
+    const userAgent = navigator.userAgent || navigator.vendor || extWindow.opera;
+    
+    if (/android/i.test(userAgent as string)) {
       return 'android';
     }
     
-    if (/iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream) {
+    if (/iPad|iPhone|iPod/.test(userAgent as string) && !extWindow.MSStream) {
       return 'ios';
     }
     
