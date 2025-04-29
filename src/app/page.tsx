@@ -9,19 +9,19 @@ export default function Home() {
   // 앱 설정
   const appConfig = {
     android: {
-      appUrl: 'coinshot://deeplink',
-      storeUrl: 'https://play.google.com/store/apps/details?id=com.finshot.coinshot',
-      webUrl: 'https://finshot.com/'
+        appUrl: 'coinshotjp://deeplink', // 안드로이드 앱 스킴
+        storeUrl: 'https://play.google.com/store/apps/details?id=com.finshotjp.coinshot',
+        webUrl: 'https://jp.coinshot.org/'
     },
     ios: {
-      appUrl: 'CoinShot://deeplink',
-      storeUrl: 'https://apps.apple.com/app/1222455831',
-      webUrl: 'https://finshot.com/'
+        appUrl: 'coinshotjp://deeplink', // iOS 앱 스킴 (대체용)
+        storeUrl: 'https://apps.apple.com/app/1603552176',
+        webUrl: 'https://jp.coinshot.org/'
     },
     web: {
-      webUrl: 'https://finshot.com/'
+        webUrl: 'https://jp.coinshot.org/'
     }
-  };
+};
 
   // 디바이스 OS 감지
   function getDeviceOS() {

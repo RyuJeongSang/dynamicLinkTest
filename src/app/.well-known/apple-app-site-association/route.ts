@@ -9,11 +9,11 @@ export async function GET() {
       apps: [],
       details: [
         {
-          appID: "Q8GJ836TBN.CoinShot1",
+          appID: "Q8GJ836TBN.com.finshotjp.coinshot",
           paths: ["*"],
           // 특정 경로만 처리하려면 다음과 같이 설정할 수 있습니다
           // paths: ["/deeplink/*", "/share/*"]
-          appIDs: ["Q8GJ836TBN.CoinShot1"],
+          appIDs: ["Q8GJ836TBN.com.finshotjp.coinshot"],
           components: [
             {
               "/": {
